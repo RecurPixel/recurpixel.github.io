@@ -13,15 +13,44 @@
             scroll-behavior: smooth;
         }
     </style>
+    <style>
+        /* 🎨 Define base colors using CSS variables (These will be updated by JavaScript) */
+        :root {
+            --color-bg-main: #0f172a;
+            /* Body Background */
+            --color-bg-card: #1e293b;
+            /* Card Background */
+            --color-text-primary: #f8fafc;
+            /* Main Text */
+            --color-text-secondary: #94a3b8;
+            /* Secondary Text/Subheadings */
+            --color-accent: #8b5cf6;
+            /* Accent Color */
+            --color-accent-light: #a78bfa;
+            /* Accent Hover/Light */
+            --color-text-label: #a78cfa;
+            /* Accent Hover/Light */
+        }
+
+        /* Optional: Enable smooth scrolling to section anchors */
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+
     <script>
+        // Configure Tailwind to use the defined CSS Variables
         tailwind.config = {
             theme: {
                 extend: {
                     colors: {
-                        'dark-bg': '#0f172a', /* slate-900 */
-                        'card-bg': '#1e293b', /* slate-800 */
-                        'accent': '#8b5cf6',  /* violet-500 (Royal Purple) */
-                        'accent-light': '#a78bfa', /* violet-400 */
+                        'dark-bg': 'var(--color-bg-main)',
+                        'card-bg': 'var(--color-bg-card)',
+                        'primary-text': 'var(--color-text-primary)',
+                        'secondary-text': 'var(--color-text-secondary)',
+                        'label-text': 'var(--color-text-label)',
+                        'accent': 'var(--color-accent)',
+                        'accent-light': 'var(--color-accent-light)',
                     },
                     fontFamily: {
                         sans: ['Roboto', 'sans-serif'],
@@ -38,7 +67,7 @@
     <header class="fixed w-full z-20 bg-dark-bg/95 backdrop-blur-sm shadow-xl shadow-slate-900/50">
         <div class="container mx-auto px-4 md:px-10 flex justify-between items-center h-20">
             <a href="#home" class="text-2xl font-heading font-bold text-accent-light tracking-wider">
-                Recur<span class="text-white">Pixel</span>
+                Recur<span class="text-label-text">Pixel</span>
             </a>
 
             <nav class="hidden md:flex space-x-6">
@@ -46,7 +75,9 @@
                 <a href="#experience" class="text-gray-400 hover:text-accent transition duration-300">Experience</a>
                 <a href="#education" class="text-gray-400 hover:text-accent transition duration-300">Education</a>
                 <a href="#projects" class="text-gray-400 hover:text-accent transition duration-300">Projects</a>
-                <a href="#achievements" class="text-gray-400 hover:text-accent transition duration-300 hidden">Achievements</a>
+                <a href="#posts" class="text-gray-400 hover:text-accent transition duration-300">Posts</a>
+                <a href="#achievements"
+                    class="text-gray-400 hover:text-accent transition duration-300 hidden">Achievements</a>
                 <a href="#contact" class="text-gray-400 hover:text-accent transition duration-300">Contact</a>
                 <a href="#"
                     class="ml-4 px-4 py-1 border border-accent text-accent rounded-md hover:bg-accent/10 transition duration-300">
@@ -62,7 +93,7 @@
             <div class="grid md:grid-cols-2 gap-10 items-center w-full">
                 <div class="order-2 md:order-1 space-y-4">
                     <p class="text-lg text-accent font-medium">Hi, my name is</p>
-                    <h1 class="text-7xl md:text-8xl font-heading font-extrabold text-white leading-none">
+                    <h1 class="text-7xl md:text-8xl font-heading font-extrabold text-label-text leading-none">
                         Manu.
                     </h1>
                     <h2 class="text-3xl md:text-4xl font-semibold text-gray-300">
@@ -83,7 +114,7 @@
 
                         <div class="flex space-x-4 text-2xl">
                             <a href="https://github.com/RecurPixel" target="_blank"
-                                class="text-gray-400 hover:text-white transition duration-300"
+                                class="text-gray-400 hover:text-label-text transition duration-300"
                                 aria-label="GitHub Profile">
                                 <i class="fab fa-github"></i>
                             </a>
@@ -101,8 +132,7 @@
                 </div>
 
                 <div class="order-1 md:order-2 flex justify-center">
-                    <img src="./assets/profile-passport.png"
-                        alt="Profile Picture Placeholder"
+                    <img src="./assets/profile-passport.png" alt="Profile Picture Placeholder"
                         class="w-64 h-64 md:w-80 md:h-80 rounded-full object-cover border-4 border-accent/50 shadow-2xl">
                 </div>
             </div>
@@ -111,117 +141,155 @@
         <div class="h-px w-24 bg-accent mx-auto my-16 md:my-24"></div>
 
         <section id="about" class="py-20 md:py-32">
-    <h3 class="text-4xl font-heading font-bold text-white mb-10 border-b-2 border-accent inline-block pb-1">
-        About Me
-    </h3>
-    
-    <div class="grid lg:grid-cols-3 gap-12 items-start">
-        
-        <div class="lg:col-span-2 space-y-6">
-            <div class="float-right ml-6 mb-4 w-40 h-40 rounded-lg overflow-hidden border-4 border-accent/50 shadow-xl hidden sm:block">
-                <img src="./assets/profile-standing-side.png" alt="Profile Picture Placeholder" class="w-full h-full object-cover">
-            </div>
-            
-            <p class="text-lg text-gray-400">
-                I am a backend developer with a **2.4-year foundation in high-traffic PHP/Laravel applications**, specializing in **API design**, complex business logic implementation, and seamless third-party integrations (Stripe, MS 365).
-            </p>
-            <p class="text-lg text-gray-400">
-                Following my full-time tenure, I strategically shifted focus, utilizing my **freelance (Feb 2023 - Jul 2023)** and subsequent **part-time roles (Aug 2023 - Jun 2024)** to dedicate myself to mastering the **.NET stack**. This transition period resulted in robust C# projects that showcase my commitment to enterprise standards, clean architecture, and modern best practices.
-            </p>
-            <p class="text-lg text-gray-400 font-semibold text-white">
-                Goal: Secure a backend role where I can immediately apply my proven development skills and growing C#/.NET expertise.
-            </p>
-        </div>
+            <h3
+                class="text-4xl font-heading font-bold text-label-text mb-10 border-b-2 border-accent inline-block pb-1">
+                About Me
+            </h3>
 
-        <div class="lg:col-span-1 space-y-8">
-            
-            <div class="p-6 rounded-xl bg-card-bg shadow-2xl border-t-4 border-accent/80">
-                <h5 class="text-xl font-semibold text-accent mb-4">Current Skills (PHP)</h5>
-                <ul class="grid grid-cols-2 gap-3 text-sm text-gray-300">
-                    <li class="flex items-center space-x-2"><span class="text-accent">→</span><span>PHP & Laravel</span></li>
-                    <li class="flex items-center space-x-2"><span class="text-accent">→</span><span>MySQL & PostgreSQL</span></li>
-                    <li class="flex items-center space-x-2"><span class="text-accent">→</span><span>REST API Development</span></li>
-                    <li class="flex items-center space-x-2"><span class="text-accent">→</span><span>Git Version Control</span></li>
-                    <li class="flex items-center space-x-2"><span class="text-accent">→</span><span>Linux Server Management</span></li>
-                </ul>
-            </div>
-            
-            <div class="p-6 rounded-xl bg-card-bg shadow-2xl border-t-4 border-gray-500">
-                <h5 class="text-xl font-semibold text-gray-300 mb-4">Learning (.NET)</h5>
-                <ul class="grid grid-cols-2 gap-3 text-sm text-gray-400">
-                    <li class="flex items-center space-x-2"><span class="text-gray-500">→</span><span>C# Programming</span></li>
-                    <li class="flex items-center space-x-2"><span class="text-gray-500">→</span><span>ASP.NET Core Web API</span></li>
-                    <li class="flex items-center space-x-2"><span class="text-gray-500">→</span><span>Entity Framework Core</span></li>
-                    <li class="flex items-center space-x-2"><span class="text-gray-500">→</span><span>SQL Server</span></li>
-                    <li class="flex items-center space-x-2"><span class="text-gray-500">→</span><span>Azure Cloud Services</span></li>
-                </ul>
-            </div>
-        </div>
+            <div class="grid lg:grid-cols-3 gap-12 items-start">
 
-    </div>
-</section>
+                <div class="lg:col-span-2 space-y-6">
+                    <div
+                        class="float-right ml-6 mb-4 w-40 h-40 rounded-lg overflow-hidden border-4 border-accent/50 shadow-xl hidden sm:block">
+                        <img src="./assets/profile-standing-side.png" alt="Profile Picture Placeholder"
+                            class="w-full h-full object-cover">
+                    </div>
+
+                    <p class="text-lg text-gray-400">
+                        I am a backend developer with a **2.4-year foundation in high-traffic PHP/Laravel
+                        applications**, specializing in **API design**, complex business logic implementation, and
+                        seamless third-party integrations (Stripe, MS 365).
+                    </p>
+                    <p class="text-lg text-gray-400">
+                        Following my full-time tenure, I strategically shifted focus, utilizing my **freelance (Feb 2023
+                        - Jul 2023)** and subsequent **part-time roles (Aug 2023 - Jun 2024)** to dedicate myself to
+                        mastering the **.NET stack**. This transition period resulted in robust C# projects that
+                        showcase my commitment to enterprise standards, clean architecture, and modern best practices.
+                    </p>
+                    <p class="text-lg text-gray-400 font-semibold text-label-text">
+                        Goal: Secure a backend role where I can immediately apply my proven development skills and
+                        growing C#/.NET expertise.
+                    </p>
+                </div>
+
+                <div class="lg:col-span-1 space-y-8">
+
+                    <div class="p-6 rounded-xl bg-card-bg shadow-2xl border-t-4 border-accent/80">
+                        <h5 class="text-xl font-semibold text-accent mb-4">Current Skills (PHP)</h5>
+                        <ul class="grid grid-cols-2 gap-3 text-sm text-gray-300">
+                            <li class="flex items-center space-x-2"><span class="text-accent">→</span><span>PHP &
+                                    Laravel</span></li>
+                            <li class="flex items-center space-x-2"><span class="text-accent">→</span><span>MySQL &
+                                    PostgreSQL</span></li>
+                            <li class="flex items-center space-x-2"><span class="text-accent">→</span><span>REST API
+                                    Development</span></li>
+                            <li class="flex items-center space-x-2"><span class="text-accent">→</span><span>Git Version
+                                    Control</span></li>
+                            <li class="flex items-center space-x-2"><span class="text-accent">→</span><span>Linux Server
+                                    Management</span></li>
+                        </ul>
+                    </div>
+
+                    <div class="p-6 rounded-xl bg-card-bg shadow-2xl border-t-4 border-gray-500">
+                        <h5 class="text-xl font-semibold text-gray-300 mb-4">Learning (.NET)</h5>
+                        <ul class="grid grid-cols-2 gap-3 text-sm text-gray-400">
+                            <li class="flex items-center space-x-2"><span class="text-gray-500">→</span><span>C#
+                                    Programming</span></li>
+                            <li class="flex items-center space-x-2"><span class="text-gray-500">→</span><span>ASP.NET
+                                    Core Web API</span></li>
+                            <li class="flex items-center space-x-2"><span class="text-gray-500">→</span><span>Entity
+                                    Framework Core</span></li>
+                            <li class="flex items-center space-x-2"><span class="text-gray-500">→</span><span>SQL
+                                    Server</span></li>
+                            <li class="flex items-center space-x-2"><span class="text-gray-500">→</span><span>Azure
+                                    Cloud Services</span></li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </section>
 
         <div class="h-px w-24 bg-accent mx-auto my-16 md:my-24"></div>
 
-       <section id="experience" class="py-20 md:py-32">
-    <h3 class="text-4xl font-heading font-bold text-white mb-10 border-b-2 border-accent inline-block pb-1">
-        Experience
-    </h3>
-    
-    <div class="space-y-12 relative border-l-4 border-slate-700 ml-4 md:ml-8">
+        <section id="experience" class="py-20 md:py-32">
+            <h3
+                class="text-4xl font-heading font-bold text-label-text mb-10 border-b-2 border-accent inline-block pb-1">
+                Experience
+            </h3>
 
-        <div class="relative pl-8 md:pl-12">
-            <div class="absolute -left-2 md:-left-3 top-1 bg-accent w-4 h-4 rounded-full border-2 border-dark-bg"></div>
-            <p class="text-sm text-gray-500 mb-1">Aug 2023 - Jun 2024 (11 mos)</p>
-            <h4 class="text-2xl font-semibold text-white">Developer (Part-time)</h4>
-            <p class="text-accent text-lg block mb-2">ITworks Infotech Pvt LTD | Remote</p>
-            
-            <p class="text-gray-400 mb-4 italic">Continued supporting critical projects remotely while actively focusing on C#/.NET transition.</p>
+            <div class="space-y-12 relative border-l-4 border-slate-700 ml-4 md:ml-8">
 
-            <ul class="list-disc list-inside space-y-2 text-gray-400 text-base pl-4">
-                <li>Provided maintenance and **legacy codebase support** for the Optimize API (Surgical Equipment/Reports).</li>
-                <li>Responsible for ongoing **debugging and feature optimization** across various microservices to ensure uptime and data integrity.</li>
-                <li>Managed **Linux VPS setup** and **EC2 instance deployment** for key client projects.</li>
-            </ul>
-        </div>
-        
-        <div class="relative pl-8 md:pl-12">
-            <div class="absolute -left-2 md:-left-3 top-1 bg-accent w-4 h-4 rounded-full border-2 border-dark-bg"></div>
-            <p class="text-sm text-gray-500 mb-1">Feb 2023 - Jul 2023 (6 mos)</p>
-            <h4 class="text-2xl font-semibold text-white">Web Developer (Freelance)</h4>
-            <p class="text-accent text-lg block mb-2">Self Employed | Focused Career Transition</p>
-            
-            <p class="text-gray-400 mb-4 italic font-bold">Dedicated this period to self-study and building portfolio projects in C#/.NET while taking on small client contracts.</p>
+                <div class="relative pl-8 md:pl-12">
+                    <div
+                        class="absolute -left-2 md:-left-3 top-1 bg-accent w-4 h-4 rounded-full border-2 border-dark-bg">
+                    </div>
+                    <p class="text-sm text-gray-500 mb-1">Aug 2023 - Jun 2024 (11 mos)</p>
+                    <h4 class="text-2xl font-semibold text-label-text">Developer (Part-time)</h4>
+                    <p class="text-accent text-lg block mb-2">ITworks Infotech Pvt LTD | Remote</p>
 
-            <ul class="list-disc list-inside space-y-2 text-gray-400 text-base pl-4">
-                <li>Completed comprehensive courses and built independent projects (see **Projects** section) to validate **C# and ASP.NET Core** proficiency.</li>
-                <li>Executed small-scale web projects for local businesses, focusing on rapid development and deployment.</li>
-            </ul>
-        </div>
-        
-        <div class="relative pl-8 md:pl-12">
-            <div class="absolute -left-2 md:-left-3 top-1 bg-accent w-4 h-4 rounded-full border-2 border-dark-bg"></div>
-            <p class="text-sm text-gray-500 mb-1">Aug 2021 - Dec 2022 (1 yr 5 mos)</p>
-            <h4 class="text-2xl font-semibold text-white">Developer (Full-time)</h4>
-            <p class="text-accent text-lg block mb-2">ITworks Infotech Pvt LTD | On-site</p>
-            
-            <p class="text-gray-400 mb-4 italic">Established core skills in scalable backend development and complex API architecture.</p>
+                    <p class="text-gray-400 mb-4 italic">Continued supporting critical projects remotely while actively
+                        focusing on C#/.NET transition.</p>
 
-            <ul class="list-disc list-inside space-y-2 text-gray-400 text-base pl-4">
-                <li>Led backend development for **OurApps** (multi-vendor platform) and **JumpStart** (scheduling algorithm).</li>
-                <li>Designed and developed high-performance **REST APIs** and user-friendly admin panels using Laravel.</li>
-                <li>Implemented complex business logic, including a **meeting slot generation Algorithm** and reliable **Stripe Payment Gateway** integration.</li>
-                <li>Deployed crucial backend utility via **Cron Jobs** for features like subscription expiry and daily patient reminders.</li>
-            </ul>
-        </div>
-        
-    </div>
-</section>
+                    <ul class="list-disc list-inside space-y-2 text-gray-400 text-base pl-4">
+                        <li>Provided maintenance and **legacy codebase support** for the Optimize API (Surgical
+                            Equipment/Reports).</li>
+                        <li>Responsible for ongoing **debugging and feature optimization** across various microservices
+                            to ensure uptime and data integrity.</li>
+                        <li>Managed **Linux VPS setup** and **EC2 instance deployment** for key client projects.</li>
+                    </ul>
+                </div>
+
+                <div class="relative pl-8 md:pl-12">
+                    <div
+                        class="absolute -left-2 md:-left-3 top-1 bg-accent w-4 h-4 rounded-full border-2 border-dark-bg">
+                    </div>
+                    <p class="text-sm text-gray-500 mb-1">Feb 2023 - Jul 2023 (6 mos)</p>
+                    <h4 class="text-2xl font-semibold text-label-text">Web Developer (Freelance)</h4>
+                    <p class="text-accent text-lg block mb-2">Self Employed | Focused Career Transition</p>
+
+                    <p class="text-gray-400 mb-4 italic font-bold">Dedicated this period to self-study and building
+                        portfolio projects in C#/.NET while taking on small client contracts.</p>
+
+                    <ul class="list-disc list-inside space-y-2 text-gray-400 text-base pl-4">
+                        <li>Completed comprehensive courses and built independent projects (see **Projects** section) to
+                            validate **C# and ASP.NET Core** proficiency.</li>
+                        <li>Executed small-scale web projects for local businesses, focusing on rapid development and
+                            deployment.</li>
+                    </ul>
+                </div>
+
+                <div class="relative pl-8 md:pl-12">
+                    <div
+                        class="absolute -left-2 md:-left-3 top-1 bg-accent w-4 h-4 rounded-full border-2 border-dark-bg">
+                    </div>
+                    <p class="text-sm text-gray-500 mb-1">Aug 2021 - Dec 2022 (1 yr 5 mos)</p>
+                    <h4 class="text-2xl font-semibold text-label-text">Developer (Full-time)</h4>
+                    <p class="text-accent text-lg block mb-2">ITworks Infotech Pvt LTD | On-site</p>
+
+                    <p class="text-gray-400 mb-4 italic">Established core skills in scalable backend development and
+                        complex API architecture.</p>
+
+                    <ul class="list-disc list-inside space-y-2 text-gray-400 text-base pl-4">
+                        <li>Led backend development for **OurApps** (multi-vendor platform) and **JumpStart**
+                            (scheduling algorithm).</li>
+                        <li>Designed and developed high-performance **REST APIs** and user-friendly admin panels using
+                            Laravel.</li>
+                        <li>Implemented complex business logic, including a **meeting slot generation Algorithm** and
+                            reliable **Stripe Payment Gateway** integration.</li>
+                        <li>Deployed crucial backend utility via **Cron Jobs** for features like subscription expiry and
+                            daily patient reminders.</li>
+                    </ul>
+                </div>
+
+            </div>
+        </section>
 
         <div class="h-px w-24 bg-accent mx-auto my-16 md:my-24"></div>
 
         <section id="skills" class="py-20 md:py-32">
-            <h3 class="text-4xl font-heading font-bold text-white mb-10 border-b-2 border-accent inline-block pb-1">
+            <h3
+                class="text-4xl font-heading font-bold text-label-text mb-10 border-b-2 border-accent inline-block pb-1">
                 Technical Skills
             </h3>
             <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -263,90 +331,60 @@
         <div class="h-px w-24 bg-accent mx-auto my-16 md:my-24"></div>
 
         <section id="education" class="py-20 md:py-32">
-    <h3 class="text-4xl font-heading font-bold text-white mb-10 border-b-2 border-accent inline-block pb-1">
-        Education
-    </h3>
-    
-    <div class="space-y-12 relative border-l-4 border-slate-700 ml-4 md:ml-8">
+            <h3
+                class="text-4xl font-heading font-bold text-label-text mb-10 border-b-2 border-accent inline-block pb-1">
+                Education
+            </h3>
 
-        <div class="relative pl-8 md:pl-12">
-            <div class="absolute -left-2 md:-left-3 top-1 bg-accent w-4 h-4 rounded-full border-2 border-dark-bg"></div>
-            <p class="text-sm text-gray-500 mb-1">June 2019 - April 2021 </p>
-            <h4 class="text-2xl font-semibold text-white">M.Sc in Computer Science</h4>
-            <p class="text-accent text-lg block mb-2">VCACS, Pune</p>
-            <p class="text-gray-400 mb-4">CGPA: <span class="font-bold text-white">9.2</span> </p>
-        </div>
+            <div class="space-y-12 relative border-l-4 border-slate-700 ml-4 md:ml-8">
 
-        <div class="relative pl-8 md:pl-12">
-            <div class="absolute -left-2 md:-left-3 top-1 bg-accent w-4 h-4 rounded-full border-2 border-dark-bg"></div>
-            <p class="text-sm text-gray-500 mb-1">June 2016 - April 2019 </p>
-            <h4 class="text-2xl font-semibold text-white">B.Sc in Computer Science</h4>
-            <p class="text-accent hover:text-accent-light text-lg block mb-2">S.M.Joshi College, Pune</p>
-            <p class="text-gray-400 mb-4">Grade: <span class="font-bold text-white">O (86.8%)</span> </p>
-        </div>
-    </div>
-</section>
+                <div class="relative pl-8 md:pl-12">
+                    <div
+                        class="absolute -left-2 md:-left-3 top-1 bg-accent w-4 h-4 rounded-full border-2 border-dark-bg">
+                    </div>
+                    <p class="text-sm text-gray-500 mb-1">June 2019 - April 2021 </p>
+                    <h4 class="text-2xl font-semibold text-label-text">M.Sc in Computer Science</h4>
+                    <p class="text-accent text-lg block mb-2">VCACS, Pune</p>
+                    <p class="text-gray-400 mb-4">CGPA: <span class="font-bold text-label-text">9.2</span> </p>
+                </div>
+
+                <div class="relative pl-8 md:pl-12">
+                    <div
+                        class="absolute -left-2 md:-left-3 top-1 bg-accent w-4 h-4 rounded-full border-2 border-dark-bg">
+                    </div>
+                    <p class="text-sm text-gray-500 mb-1">June 2016 - April 2019 </p>
+                    <h4 class="text-2xl font-semibold text-label-text">B.Sc in Computer Science</h4>
+                    <p class="text-accent hover:text-accent-light text-lg block mb-2">S.M.Joshi College, Pune</p>
+                    <p class="text-gray-400 mb-4">Grade: <span class="font-bold text-label-text">O (86.8%)</span> </p>
+                </div>
+            </div>
+        </section>
 
         <div class="h-px w-24 bg-accent mx-auto my-16 md:my-24"></div>
 
         <section id="projects" class="py-20 md:py-32">
-    <h3 class="text-4xl font-heading font-bold text-white mb-10 border-b-2 border-accent inline-block pb-1">
-        Projects
-    </h3>
-    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-        
-        <div class="bg-card-bg rounded-xl shadow-2xl transition duration-300 hover:scale-[1.02] hover:shadow-accent/20 overflow-hidden">
-            <div class="h-40 w-full overflow-hidden">
-                <img src="https://placehold.co/500x300/4c77c0/1e293b?text=.NET+Core+API" alt="ASP.NET Core Project Mockup" class="w-full h-full object-cover">
+            <h3
+                class="text-4xl font-heading font-bold text-label-text mb-10 border-b-2 border-accent inline-block pb-1">
+                Projects
+            </h3>
+            <div id="projects-container" class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <p class="text-gray-400">Loading projects...</p>
             </div>
-            
-            <div class="p-6">
-                <h4 class="text-2xl font-semibold text-white mb-2">Clean Architecture API</h4>
-                <p class="text-accent text-sm mb-4">ASP.NET Core 8 | C# | EF Core | PostgreSQL</p>
-                <p class="text-gray-400 mb-4">A fully structured REST API using Onion Architecture for maximum scalability and testability, demonstrating proficiency in modern .NET development.</p>
-                <a href="#" target="_blank" class="text-accent hover:text-accent-light font-medium">View Code <i class="fa-solid fa-arrow-up-right-from-square text-xs ml-1"></i></a>
-            </div>
-        </div>
-        
-        <div class="bg-card-bg rounded-xl shadow-2xl transition duration-300 hover:scale-[1.02] hover:shadow-accent/20 overflow-hidden">
-             <div class="h-40 w-full overflow-hidden">
-                <img src="https://placehold.co/500x300/6a1b9a/1e293b?text=C#+Desktop+App" alt="C# Desktop App Mockup" class="w-full h-full object-cover">
-            </div>
-            
-            <div class="p-6">
-                <h4 class="text-2xl font-semibold text-white mb-2">Inventory Management (WPF)</h4>
-                <p class="text-accent text-sm mb-4">C# | WPF | SQL Server</p>
-                <p class="text-gray-400 mb-4">A small-scale desktop application built with WPF and connected to SQL Server, showcasing C# fundamentals beyond web development.</p>
-                <a href="#" target="_blank" class="text-accent hover:text-accent-light font-medium">View Demo <i class="fa-solid fa-arrow-up-right-from-square text-xs ml-1"></i></a>
-            </div>
-        </div>
-        
-        <div class="bg-card-bg rounded-xl shadow-2xl transition duration-300 hover:scale-[1.02] hover:shadow-accent/20 overflow-hidden">
-             <div class="h-40 w-full overflow-hidden">
-                <img src="https://placehold.co/500x300/059669/1e293b?text=Laravel+API" alt="Laravel Microservice Mockup" class="w-full h-full object-cover">
-            </div>
-            
-            <div class="p-6">
-                <h4 class="text-2xl font-semibold text-white mb-2">Open Source: Hugo Profile</h4>
-                <p class="text-accent text-sm mb-4">Hugo | Javascript | Open Source</p>
-                <p class="text-gray-400 mb-4">A popular open-source Hugo template for personal portfolios, showcasing my ability to build and contribute to community projects.</p>
-                <a href="https://github.com/gurusabarish/hugo-profile" target="_blank" class="text-accent hover:text-accent-light font-medium">View Code <i class="fa-solid fa-arrow-up-right-from-square text-xs ml-1"></i></a>
-            </div>
-        </div>
-    </div>
-</section>
+        </section>
 
         <div class="h-px w-24 bg-accent mx-auto my-16 md:my-24 hidden"></div>
 
         <section id="achievements" class="py-20 md:py-32 hidden">
-            <h3 class="text-4xl font-heading font-bold text-white mb-10 border-b-2 border-accent inline-block pb-1">
+            <h3
+                class="text-4xl font-heading font-bold text-label-text mb-10 border-b-2 border-accent inline-block pb-1">
                 Achievements
             </h3>
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <a href="#"
                     class="group block bg-card-bg p-6 rounded-xl shadow-2xl transition duration-300 hover:bg-slate-700/50">
                     <i class="fa-solid fa-trophy text-2xl text-accent mb-3"></i>
-                    <h4 class="text-xl font-semibold text-white mb-1 group-hover:text-accent-light">Google Kickstart
+                    <h4 class="text-xl font-semibold text-label-text mb-1 group-hover:text-accent-light">Google
+                        Kickstart
                         Runner</h4>
                     <p class="text-gray-400 text-sm">Solved all problems with optimal solutions in the global coding
                         competition.</p>
@@ -354,7 +392,8 @@
                 <a href="#"
                     class="group block bg-card-bg p-6 rounded-xl shadow-2xl transition duration-300 hover:bg-slate-700/50">
                     <i class="fa-solid fa-medal text-2xl text-accent mb-3"></i>
-                    <h4 class="text-xl font-semibold text-white mb-1 group-hover:text-accent-light">Facebook Hackathon
+                    <h4 class="text-xl font-semibold text-label-text mb-1 group-hover:text-accent-light">Facebook
+                        Hackathon
                         Winner</h4>
                     <p class="text-gray-400 text-sm">Developed a winning product using Artificial Intelligence in a
                         24-hour challenge.</p>
@@ -362,7 +401,8 @@
                 <a href="https://github.com/gurusabarish/hugo-profile"
                     class="group block bg-card-bg p-6 rounded-xl shadow-2xl transition duration-300 hover:bg-slate-700/50">
                     <i class="fa-solid fa-download text-2xl text-accent mb-3"></i>
-                    <h4 class="text-xl font-semibold text-white mb-1 group-hover:text-accent-light">Hugo Profile</h4>
+                    <h4 class="text-xl font-semibold text-label-text mb-1 group-hover:text-accent-light">Hugo Profile
+                    </h4>
                     <p class="text-gray-400 text-sm">Developed a popular open-source theme with 1K+ downloads per month.
                     </p>
                 </a>
@@ -372,58 +412,27 @@
         <div class="h-px w-24 bg-accent mx-auto my-16 md:my-24"></div>
 
         <section id="posts" class="py-20 md:py-32">
-    <h3 class="text-4xl font-heading font-bold text-white mb-10 border-b-2 border-accent inline-block pb-1">
-        Recent Posts
-    </h3>
-    
-    <div class="grid md:grid-cols-3 gap-8">
-        
-        <a href="/blogs/math/" class="group block bg-card-bg rounded-xl shadow-2xl overflow-hidden transition duration-300 hover:shadow-accent/30">
-            <div class="h-40 w-full overflow-hidden">
-                <img src="https://placehold.co/500x300/1e293b/a1a1aa?text=Mathjax+Post+Header" alt="Post Image" class="w-full h-full object-cover">
-            </div>
-            
-            <div class="p-6">
-                <h4 class="text-xl font-semibold text-white mb-2 group-hover:text-accent-light">Render Math With Mathjax</h4>
-                <p class="text-gray-500 text-sm mb-4">Dec 9, 2022</p>
-                <p class="text-gray-400 text-sm">Math equations can be rendered using Mathjax syntax with AMS symbol support. Optionally enable this on a per-page basis...</p>
-                <span class="text-accent font-medium mt-4 block">Read →</span>
-            </div>
-        </a>
-        
-        <a href="/blogs/markdown-syntax/" class="group block bg-card-bg rounded-xl shadow-2xl overflow-hidden transition duration-300 hover:shadow-accent/30">
-            <div class="h-40 w-full overflow-hidden">
-                <img src="https://placehold.co/500x300/1e293b/a1a1aa?text=Markdown+Post+Header" alt="Post Image" class="w-full h-full object-cover">
-            </div>
-            
-            <div class="p-6">
-                <h4 class="text-xl font-semibold text-white mb-2 group-hover:text-accent-light">Markdown Syntax</h4>
-                <p class="text-gray-500 text-sm mb-4">Apr 3, 2021</p>
-                <p class="text-gray-400 text-sm">Xerum, quo qui aut unt expliquam qui dolut labo. Aque venitatiusda cum, voluptionse latur sitiae dolessi aut parist aut dollo...</p>
-                <span class="text-accent font-medium mt-4 block">Read →</span>
-            </div>
-        </a>
+            <h3
+                class="text-4xl font-heading font-bold text-label-text mb-10 border-b-2 border-accent inline-block pb-1">
+                Recent Posts <span class="text-gray-500 text-base font-sans">(Powered by Dev.to)</span>
+            </h3>
 
-        <a href="/blogs/emoji-support/" class="group block bg-card-bg rounded-xl shadow-2xl overflow-hidden transition duration-300 hover:shadow-accent/30">
-            <div class="h-40 w-full overflow-hidden">
-                <img src="https://placehold.co/500x300/1e293b/a1a1aa?text=Emoji+Post+Header" alt="Post Image" class="w-full h-full object-cover">
+            <div id="devto-posts-container" class="grid md:grid-cols-3 gap-8">
+                <p class="text-gray-400">Loading posts...</p>
             </div>
-            
-            <div class="p-6">
-                <h4 class="text-xl font-semibold text-white mb-2 group-hover:text-accent-light">Emoji Support</h4>
-                <p class="text-gray-500 text-sm mb-4">Apr 3, 2021</p>
-                <p class="text-gray-400 text-sm">Emoji can be enabled in a Hugo project in a number of ways. The emojify function can be called directly in templates...</p>
-                <span class="text-accent font-medium mt-4 block">Read →</span>
+
+            <div class="text-center mt-12">
+                <a href="https://dev.to/recurpixel" target="_blank"
+                    class="inline-block px-6 py-3 border border-accent text-accent rounded-lg hover:bg-accent/10 transition duration-300">
+                    View All Dev.to Articles <i class="fa-solid fa-arrow-up-right-from-square text-xs ml-1"></i>
+                </a>
             </div>
-        </a>
-        
-    </div>
-</section>
+        </section>
 
         <div class="h-px w-24 bg-accent mx-auto my-16 md:my-24"></div>
 
         <section id="contact" class="py-20 md:py-32 text-center">
-            <h3 class="text-4xl font-heading font-bold text-white mb-6 border-b-2 border-accent inline-block pb-1">
+            <h3 class="text-4xl font-heading font-bold text-label-text mb-6 border-b-2 border-accent inline-block pb-1">
                 Get in Touch
             </h3>
 
@@ -443,24 +452,247 @@
     <footer class="text-center py-8 border-t border-slate-800 text-gray-500 text-sm mt-20">
         <div class="flex justify-center space-x-6 mb-4 text-xl">
             <a href="https://github.com/RecurPixel" target="_blank"
-                class="text-gray-400 hover:text-white transition duration-300" aria-label="GitHub Profile">
+                class="text-gray-400 hover:text-label-text transition duration-300" aria-label="GitHub Profile">
                 <i class="fab fa-github"></i>
             </a>
             <a href="https://linkedin.com/in/RecurPixel" target="_blank"
                 class="text-gray-400 hover:text-blue-500 transition duration-300" aria-label="LinkedIn Profile">
                 <i class="fab fa-linkedin"></i>
             </a>
-            <a href="https://twitter.com/RecurPixel" target="_blank"
-                class="text-gray-400 hover:text-blue-400 transition duration-300" aria-label="Twitter Profile">
-                <i class="fab fa-twitter"></i>
+            <a href="https://x.com/RecurPixel" target="_blank"
+                class="text-gray-400 hover:text-blue-400 transition duration-300" aria-label="X Profile">
+                <i class="fa-brands fa-x-twitter"></i>
             </a>
             <a href="mailto:recurpixel@gmail.com" class="text-gray-400 hover:text-accent transition duration-300"
                 aria-label="Email Me">
                 <i class="fas fa-envelope"></i>
             </a>
         </div>
-        <p>© 2025 All rights reserved | Rebuilt with Tailwind CSS</p>
+        <p>© 2025 All rights reserved | Building the future, one module at a time.</p>
     </footer>
+
+    <script>
+        const themes = {
+            // --- DARK THEMES ---
+            dark: [
+                // Dark Theme 1: Regal Dark (Purple Accent)
+                {
+                    bgMain: '#070b13',
+                    bgCard: '#171c26',
+                    textPrimary: '#f8fafc',
+                    textSecondary: '#94a3b8',
+                    accent: '#9c27b0', // Royal Violet
+                    accentLight: '#ce93d8',
+                    labelText: '#a78cfa'
+                },
+                // Dark Theme 2: Forest Dark (Emerald Accent)
+                {
+                    bgMain: '#050c0a',
+                    bgCard: '#131f1c',
+                    textPrimary: '#59AC77',
+                    textSecondary: '#3A6F43',
+                    accent: '#059669', // Emerald
+                    accentLight: '#FDAAAA',
+                    labelText: '#FFD5D5'
+                }
+            ],
+            // --- LIGHT THEMES ---
+            light: [
+                // Light Theme 1: Bright Sky (Blue Accent)
+                {
+                    bgMain: '#f5f7fa',
+                    bgCard: '#ffffff',
+                    textPrimary: '#3b82f6',
+                    textSecondary: '#f0fdf4',
+                    accent: '#3b82f6', // Deep Blue
+                    accentLight: '#60a5fa',
+                    labelText: '#93c5fd'
+                },
+                // Light Theme 2: Sandstone (Rust/Orange Accent)
+                {
+                    bgMain: '#fcfbf6',
+                    bgCard: '#ffffff',
+                    textPrimary: '#f0fdf4',
+                    textSecondary: '#3b82f6',
+                    accent: '#d97706', // Orange/Rust
+                    accentLight: '#fbbf24',
+                    labelText: '#ff5656'
+                }
+            ]
+        };
+
+        const root = document.documentElement;
+        const body = document.body;
+
+        const applyRandomFullTheme = () => {
+            // 1. Randomly decide on a mode (Light or Dark)
+            const modeKeys = Object.keys(themes);
+            const randomModeKey = modeKeys[Math.floor(Math.random() * modeKeys.length)];
+            const modePalettes = themes[randomModeKey];
+
+            // 2. Randomly select a palette within that mode
+            const randomIndex = Math.floor(Math.random() * modePalettes.length);
+            const selectedTheme = modePalettes[randomIndex];
+
+            // 3. Apply the CSS variables
+            root.style.setProperty('--color-bg-main', selectedTheme.bgMain);
+            root.style.setProperty('--color-bg-card', selectedTheme.bgCard);
+            root.style.setProperty('--color-text-primary', selectedTheme.textPrimary);
+            root.style.setProperty('--color-text-secondary', selectedTheme.textSecondary);
+            root.style.setProperty('--color-accent', selectedTheme.accent);
+            root.style.setProperty('--color-accent-light', selectedTheme.accentLight);
+            root.style.setProperty('--color-text-label', selectedTheme.labelText);
+
+            // 4. Update the Body Class to switch background and default text
+            // We use Tailwind classes defined in the config now:
+
+            // Remove previous classes
+            body.classList.remove('bg-dark-bg', 'bg-card-bg', 'text-primary-text', 'text-secondary-text');
+
+            // Apply new classes (These map to the new CSS variables)
+            body.classList.add('bg-dark-bg', 'text-primary-text');
+
+            console.log(`Applied new theme: ${randomModeKey} with accent ${selectedTheme.accent}`);
+        };
+
+        // Apply a random theme immediately on load
+        applyRandomFullTheme();
+    </script>
+
+    <script>
+        // 🔑 IMPORTANT: REPLACE THIS WITH YOUR ACTUAL DEV.TO USERNAME
+        const devToUsername = 'recurpixel';
+        const postsContainer = document.getElementById('devto-posts-container');
+        const apiUrl = `https://dev.to/api/articles?username=${devToUsername}`;
+
+        // Function to format the date
+        const formatDate = (dateString) => {
+            const options = { year: 'numeric', month: 'short', day: 'numeric' };
+            return new Date(dateString).toLocaleDateString(undefined, options);
+        };
+
+        // Function to generate the HTML for a single post card
+        const createPostCard = (post) => {
+            // Use cover_image if available, otherwise use a placeholder
+            const imageUrl = post.cover_image || 'https://placehold.co/500x300/1e293b/a78bfa?text=Dev.to+Article';
+            const formattedDate = formatDate(post.published_at);
+
+            return `
+            <a href="${post.url}" target="_blank" class="group block bg-card-bg rounded-xl shadow-2xl overflow-hidden transition duration-300 hover:shadow-accent/30">
+                <div class="h-40 w-full overflow-hidden">
+                    <img src="${imageUrl}" alt="${post.title}" class="w-full h-full object-cover">
+                </div>
+                
+                <div class="p-6">
+                    <h4 class="text-xl font-semibold text-label-text mb-2 group-hover:text-accent-light">${post.title}</h4>
+                    <p class="text-gray-500 text-sm mb-4">${formattedDate}</p>
+                    <p class="text-gray-400 text-sm">${post.description}</p>
+                    <span class="text-accent font-medium mt-4 block">Read Article →</span>
+                </div>
+            </a>
+        `;
+        };
+
+        // Main function to fetch and display posts
+        const fetchDevToPosts = async () => {
+            // Clear the "Loading..." message
+            postsContainer.innerHTML = '';
+
+            try {
+                const response = await fetch(apiUrl);
+                if (!response.ok) {
+                    // If the user doesn't exist or API fails, show an error
+                    postsContainer.innerHTML = `<p class="text-red-400">Error fetching posts. Please check the Dev.to username.</p>`;
+                    console.error('Dev.to API Error:', response.statusText);
+                    return;
+                }
+
+                const data = await response.json();
+
+                if (data.length === 0) {
+                    postsContainer.innerHTML = `<p class="text-gray-400">No posts found on Dev.to for this user yet. Start writing!</p>`;
+                    return;
+                }
+
+                // Get the top 3 posts
+                const recentPosts = data.slice(0, 3);
+
+                // Generate and inject the HTML cards
+                recentPosts.forEach(post => {
+                    postsContainer.innerHTML += createPostCard(post);
+                });
+
+            } catch (error) {
+                postsContainer.innerHTML = `<p class="text-red-400">Could not connect to Dev.to API.</p>`;
+                console.error('Fetch error:', error);
+            }
+        };
+
+        // Function to fetch and display projects from projects.json
+        const fetchAndDisplayProjects = async () => {
+            const projectsContainer = document.getElementById('projects-container');
+            projectsContainer.innerHTML = ''; // Clear loading message
+
+            try {
+                const response = await fetch('assets/projects.json');
+
+                if (!response.ok) {
+                    projectsContainer.innerHTML = `<p class="text-red-400">Error loading projects. Make sure 'projects.json' file exists in the correct directory.</p>`;
+                    return;
+                }
+
+                const projects = await response.json();
+
+                if (projects.length === 0) {
+                    projectsContainer.innerHTML = `<p class="text-gray-400">No projects defined in projects.json.</p>`;
+                    return;
+                }
+
+                projects.forEach(project => {
+                    // Build the Tags line
+                    const tagsHtml = project.tags.map(tag => tag).join(' | ');
+
+                    // Determine which link to show (GitHub or NuGet)
+                    let actionLinkHtml = '';
+                    if (project.github_link) {
+                        actionLinkHtml = `<a href="${project.github_link}" target="_blank" class="text-accent hover:text-accent-light font-medium">View Code <i class="fa-brands fa-github text-xs ml-1"></i></a>`;
+                    } else if (project.nuget_link) {
+                        actionLinkHtml = `<a href="${project.nuget_link}" target="_blank" class="text-accent hover:text-accent-light font-medium">View NuGet <i class="fa-solid fa-cube text-xs ml-1"></i></a>`;
+                    } else {
+                        actionLinkHtml = `<span class="text-gray-500 font-medium">Link Unavailable</span>`;
+                    }
+
+                    const cardHtml = `
+                <div class="bg-card-bg rounded-xl shadow-2xl transition duration-300 hover:scale-[1.02] hover:shadow-accent/20 overflow-hidden">
+                    <div class="h-40 w-full overflow-hidden">
+                        <img src="${project.image_url}" alt="${project.name} Mockup" class="w-full h-full object-cover">
+                    </div>
+                    
+                    <div class="p-6">
+                        <h4 class="text-2xl font-semibold text-label-text mb-2">${project.name}</h4>
+                        <p class="text-accent text-sm mb-4">${tagsHtml}</p>
+                        <p class="text-gray-400 mb-4">${project.description}</p>
+                        ${actionLinkHtml}
+                    </div>
+                </div>
+            `;
+                    projectsContainer.innerHTML += cardHtml;
+                });
+
+            } catch (error) {
+                projectsContainer.innerHTML = `<p class="text-red-400">Failed to process projects data.</p>`;
+                console.error('Project data processing error:', error);
+            }
+        };
+
+        // Run the function when the page loads
+        fetchAndDisplayProjects();
+
+        // Run the function when the page loads
+        fetchDevToPosts();
+
+
+    </script>
 
 </body>
 

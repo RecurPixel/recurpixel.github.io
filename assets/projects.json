@@ -1,0 +1,10 @@
+[
+  {
+    "name": "RecurPixel EasyMessages",
+    "description": "Production-ready message library for .NET. 200+ built-in messages. Zero configuration. Because developers shouldn't waste time writing error messages. 🚀",
+    "tags": ["C#", "Clean Architecture", ".NET", "NuGet", "Open Source", "Library"],
+    "image_url": "https://placehold.co/500x300/4c77c0/1e293b?text=RecurPixel+EasyMessages",
+    "github_link": "https://github.com/RecurPixel/RecurPixel.EasyMessages",
+    "nuget_link": "https://www.nuget.org/packages/RecurPixel.EasyMessages"
+  }
+]
