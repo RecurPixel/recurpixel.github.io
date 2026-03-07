@@ -1,0 +1,600 @@
+{
+    "personal": {
+        "name": "Manu",
+        "firstName": "Manu",
+        "lastName": "",
+        "tagline": "Backend Developer | .NET & ASP.NET Core",
+        "greeting": "Hi, my name is",
+        "bio": "Backend engineer with 4+ years of proven delivery experience across APIs and production systems, including 2+ years leading independent product and open-source development. Specialized in .NET, ASP.NET Core, and Entity Framework Core with a strong focus on clean architecture.",
+        "location": "Pune, Maharashtra, IN"
+    },
+    "about": {
+        "introduction": [
+            "I'm a backend developer with **4+ years of proven backend delivery experience** across product teams and client projects, including **2+ years of independent product development**.",
+            "My technical journey has evolved from working with different backend technologies to now specializing in the **.NET ecosystem**. I focus on building clean, maintainable APIs using ASP.NET Core, Entity Framework Core, and modern development practices.",
+            "I'm passionate about backend architecture, database design, and writing code that's easy for teams to work with. Currently expanding my expertise in cloud-native development with Azure."
+        ],
+        "goal": "🎯 Seeking backend development opportunities where I can contribute to production systems while growing as a .NET engineer.",
+        "currentSkills": [
+            "C# & .NET",
+            "ASP.NET Core Web API",
+            "Entity Framework Core",
+            "SQL Server & T-SQL",
+            "RESTful API Design",
+            "Git & Azure DevOps"
+        ],
+        "learningSkills": [
+            "Microservices Architecture",
+            "Docker & Kubernetes",
+            "Azure Cloud Services",
+            "Design Patterns",
+            "System Design & Scalability"
+        ]
+    },
+    "experience": [
+        {
+            "title": "Independent Software Developer",
+            "company": "Self-Employed",
+            "location": "Pune District, Maharashtra (Remote)",
+            "startDate": "Jun 2024",
+            "endDate": "Present",
+            "duration": "1 yr 10 mos",
+            "current": true,
+            "phase": "🚀 Growth & Contribution",
+            "narrative": "Successfully transitioned to full-time independent development. Building production-grade .NET applications and maintaining impactful open-source projects. Proving the viability of indie development while contributing meaningfully to the .NET ecosystem.",
+            "responsibilities": [
+                "📦 Published and actively maintain **RecurPixel.Notify** NuGet package (500+ downloads) — multi-channel notification library with 30+ adapters and 13+ channels",
+                "🏗️ Building **ShopCore** — enterprise-grade multi-vendor e-commerce backend with 150+ API endpoints, Clean Architecture, and CQRS",
+                "🔧 Architected production systems using ASP.NET Core 10, Entity Framework Core, advanced design patterns, and Azure",
+                "👨‍💻 Contributing to .NET community through open-source development and helping other developers",
+                "📚 Deepened expertise in cloud-native architecture, scalability patterns, and advanced .NET features"
+            ],
+            "metrics": {
+                "nugetDownloads": "500+",
+                "projectMetrics": "150+ APIs, 50+ entities, 40+ tables"
+            },
+            "skills": [
+                "ASP.NET Core 10",
+                "Entity Framework Core",
+                "Clean Architecture",
+                "CQRS",
+                "SQL Server",
+                "Azure",
+                "NuGet Publishing",
+                "Open Source Leadership"
+            ]
+        },
+        {
+            "title": "Developer (Part-time, Strategic)",
+            "company": "ITWorks Infotech Pvt LTD",
+            "location": "Pune District, Maharashtra (Remote)",
+            "startDate": "Aug 2023",
+            "endDate": "Jun 2024",
+            "duration": "11 mos",
+            "phase": "⚡ Strategic Transition",
+            "narrative": "Deliberately shifted to part-time consulting while launching independent projects. A strategic move — having proven expertise allowed returning on flexible terms to fund and develop personal ventures. This phase proved the foundation was strong enough to serve clients while building the future.",
+            "responsibilities": [
+                "Served as experienced consultant on part-time basis for established client relationships",
+                "Maintained and optimized critical backend API systems for production applications",
+                "Managed cloud infrastructure (AWS EC2, Linux VPS) ensuring high availability and performance",
+                "Debugged and enhanced features across complex distributed systems",
+                "Leveraged proven track record to negotiate flexible arrangement supporting independent work"
+            ],
+            "keyWins": [
+                "Demonstrated ability to balance consulting with personal projects",
+                "Maintained strong client relationships while pursuing bigger goals",
+                "Proved readiness for full independence"
+            ],
+            "skills": [
+                "ASP.NET Core",
+                "AWS",
+                "Linux",
+                "API Optimization",
+                "Technical Consulting"
+            ]
+        },
+        {
+            "title": "Web Developer (Freelance)",
+            "company": "Self-Employed",
+            "location": "Pune District, Maharashtra",
+            "startDate": "Feb 2023",
+            "endDate": "Jul 2023",
+            "duration": "6 mos",
+            "phase": "🔧 First Independent Venture",
+            "narrative": "Took the leap into independence. Built diverse client projects while aggressively upskilling in .NET ecosystem. This period proved both capability and hunger — completing projects while mastering new technologies showed the versatility needed for success.",
+            "responsibilities": [
+                "Built end-to-end solutions for startup and SME clients across multiple industries",
+                "Developed complete backend systems with database architectures designed from scratch",
+                "Intensively mastered .NET ecosystem (C#, ASP.NET Core, Entity Framework Core) through real-world application",
+                "Managed full project lifecycle: requirements → architecture → development → deployment → support",
+                "Delivered 5+ complete projects with 100% client satisfaction"
+            ],
+            "keyWins": [
+                "Proved ability to work independently with clients",
+                "Deep technical learning through diverse projects",
+                "Established foundation for sustainable independent work"
+            ],
+            "skills": [
+                "C#",
+                "ASP.NET Core",
+                "Backend Architecture",
+                "Database Design",
+                "RESTful APIs",
+                "Client Management"
+            ]
+        },
+        {
+            "title": "Developer (Full-time Foundation)",
+            "company": "ITWorks Infotech Pvt LTD",
+            "location": "Pune Division, Maharashtra (On-site)",
+            "startDate": "Aug 2021",
+            "endDate": "Dec 2022",
+            "duration": "1 yr 5 mos",
+            "phase": "🎓 Career Foundation",
+            "narrative": "Launched professional career fresh from M.Sc. Worked with experienced teams on real production systems, learning industry best practices, handling critical business logic, and building strong engineering fundamentals. This foundation made everything that came after possible.",
+            "responsibilities": [
+                "Led backend development for 10+ client applications across different business domains",
+                "Designed RESTful APIs and database schemas for scalable systems",
+                "Integrated complex third-party services: payment gateways (Razorpay, Stripe), OAuth, SMS/email providers",
+                "Built comprehensive admin dashboards and business management platforms",
+                "Collaborated with senior developers and learned production engineering culture",
+                "Improved system performance through optimization and architectural improvements"
+            ],
+            "keyLearnings": [
+                "Production-grade code quality and testing practices",
+                "API design and database optimization principles",
+                "Payment processing and security best practices",
+                "Working in team environments and code reviews"
+            ],
+            "skills": [
+                "C#",
+                ".NET Framework & .NET Core",
+                "ASP.NET",
+                "SQL Server",
+                "RESTful API Design",
+                "Third-party Integrations",
+                "T-SQL"
+            ]
+        }
+    ],
+    "education": [
+        {
+            "degree": "M.Sc in Computer Science",
+            "institution": "VCACS, Pune",
+            "startDate": "June 2019",
+            "endDate": "April 2021",
+            "grade": "CGPA: 9.2",
+            "gradeType": "CGPA"
+        },
+        {
+            "degree": "B.Sc in Computer Science",
+            "institution": "S.M.Joshi College, Pune",
+            "startDate": "June 2016",
+            "endDate": "April 2019",
+            "grade": "O (86.8%)",
+            "gradeType": "Grade"
+        }
+    ],
+    "technicalSkills": {
+        "backend": "C#, .NET, ASP.NET Core Web API, Entity Framework Core, RESTful APIs",
+        "database": "SQL Server, T-SQL, MySQL, PostgreSQL, Database Design",
+        "tools": "Git, Azure, Visual Studio, Docker, Linux, Postman"
+    },
+    "projects": [
+        {
+            "name": "RecurPixel.Notify",
+            "description": "Production-ready NuGet library for multi-channel notification delivery in ASP.NET Core. Drop-in solution supporting Email, SMS, Push, WhatsApp, Slack, Discord, Teams, Mattermost, Rocket.Chat, Telegram, Facebook, LINE, Viber, and In-App notifications.",
+            "technologies": [
+                ".NET",
+                "ASP.NET Core",
+                "Dependency Injection",
+                "NuGet Package",
+                "SendGrid",
+                "Twilio",
+                "Firebase",
+                "Razorpay"
+            ],
+            "tags": [
+                "NuGet",
+                "Open Source",
+                "Production",
+                "Multi-Channel"
+            ],
+            "github": "https://github.com/RecurPixel/Notify",
+            "demo": "https://www.nuget.org/packages/RecurPixel.Notify.Sdk",
+            "image": "",
+            "metrics": {
+                "adapters": "30+",
+                "channels": "13+",
+                "downloads": "500+",
+                "providers": "25+"
+            },
+            "highlights": [
+                "30+ provider adapters",
+                "13+ notification channels",
+                "Zero infrastructure - pure library",
+                "DI-native with ASP.NET Core integration",
+                "Retry with exponential backoff",
+                "Cross-channel fallback chains",
+                "Parallel dispatch support",
+                "Hook-based logging"
+            ],
+            "status": "Published"
+        },
+        {
+            "name": "ShopCore",
+            "description": "ShopCore is a dual-purpose platform combining traditional e-commerce with an innovative subscription-based recurring delivery system for daily essentials, targeting the Indian market. One backend powers a public multi-vendor marketplace and a private subscription product.",
+            "technologies": [
+                "ASP.NET Core 10",
+                "Entity Framework Core 10",
+                "MediatR",
+                "FluentValidation",
+                "SQL Server",
+                "JWT Auth",
+                "Razorpay",
+                "Stripe",
+                "Clean Architecture",
+                "CQRS"
+            ],
+            "tags": [
+                "E-Commerce",
+                "Subscriptions",
+                "Multi-Vendor",
+                "Production",
+                "Open Source"
+            ],
+            "github": "https://github.com/RecurPixel/ShopCore",
+            "demo": "",
+            "image": "",
+            "metrics": {
+                "endpoints": "150+",
+                "entities": "50+",
+                "tables": "40+",
+                "workflows": "12+"
+            },
+            "highlights": [
+                "150+ API endpoints",
+                "50+ domain entities and models",
+                "One backend, two frontends: public marketplace + private subscription product",
+                "Flexible billing cycles with daily delivery and monthly payment",
+                "Optional deposit system with smart settlement",
+                "Multi-item subscriptions in one plan (milk + newspaper + bread)",
+                "Vendor-led customer onboarding and location-based vendor discovery",
+                "Subscription management with skip/pause",
+                "Razorpay and Stripe integration with role-based access control",
+                "Email and in-app notifications",
+                "PDF invoice generation",
+                "xUnit integration testing",
+                "WebApplicationFactory setup included"
+            ],
+            "features": [
+                "Authentication & Authorization",
+                "Multi-Vendor Management",
+                "E-Commerce Marketplace (Cart, Checkout, Orders)",
+                "Subscription Platform (Recurring Delivery + Billing)",
+                "Flexible Billing Cycles",
+                "Optional Deposit & Settlement",
+                "Location-based Vendor Discovery",
+                "Payment Processing",
+                "Notifications",
+                "Reviews & Wishlist",
+                "Coupons & Discounts"
+            ],
+            "status": "Production Ready"
+        },
+        {
+            "name": "Business Management Platform",
+            "description": "Full-stack application for inventory tracking, client management, and reporting with admin dashboard.",
+            "technologies": [
+                "Backend APIs",
+                "Database Design",
+                "Cloud Deployment"
+            ],
+            "tags": [
+                "REST API",
+                "Full Stack",
+                "Production"
+            ],
+            "github": "",
+            "demo": "",
+            "image": "",
+            "note": "Client project - code not publicly available"
+        },
+        {
+            "name": "Meeting Scheduler API",
+            "description": "Enterprise scheduling system with calendar integration, time slot management, and third-party service sync.",
+            "technologies": [
+                "REST APIs",
+                "Database Architecture",
+                "Third-party Integration"
+            ],
+            "tags": [
+                "Backend",
+                "Integration",
+                "Enterprise"
+            ],
+            "github": "",
+            "demo": "",
+            "image": "",
+            "note": "Production system"
+        }
+    ],
+    "achievements": [
+        {
+            "title": "C# Advanced Programming",
+            "issuer": "Pluralsight",
+            "date": "2023",
+            "status": "Completed",
+            "description": "Completed deep dives into LINQ, async/await, generics, and modern C# language patterns used in production APIs.",
+            "credentialUrl": ""
+        },
+        {
+            "title": "ASP.NET Core Fundamentals",
+            "issuer": "Pluralsight",
+            "date": "2024",
+            "status": "Completed",
+            "description": "Covered middleware, dependency injection, configuration, routing, and practical API architecture patterns.",
+            "credentialUrl": ""
+        },
+        {
+            "title": "Entity Framework Core Path",
+            "issuer": "Pluralsight",
+            "date": "Current",
+            "status": "Ongoing",
+            "description": "Actively improving query optimization, migrations strategy, and performance tuning for large data workflows.",
+            "credentialUrl": ""
+        },
+        {
+            "title": "Microservices Architecture for .NET",
+            "issuer": "Pluralsight",
+            "date": "Next",
+            "status": "Planned",
+            "description": "Planned next to strengthen service boundaries, resilience, and event-driven integration patterns.",
+            "credentialUrl": ""
+        },
+        {
+            "title": "DevOps for .NET Developers",
+            "issuer": "Pluralsight",
+            "date": "Roadmap",
+            "status": "Planned",
+            "description": "Planned focus area for CI/CD pipelines, container workflows, and release reliability at scale.",
+            "credentialUrl": ""
+        },
+        {
+            "title": "System Design for Backend Engineers",
+            "issuer": "Pluralsight",
+            "date": "Roadmap",
+            "status": "Planned",
+            "description": "Planned learning track for scalability, distributed systems tradeoffs, and architecture decision-making.",
+            "credentialUrl": ""
+        }
+    ],
+    "milestones": [
+        {
+            "title": "Specialized in .NET ecosystem and cloud-native development",
+            "year": "2023"
+        },
+        {
+            "title": "Built and deployed production-grade backend applications",
+            "year": "2021-2022"
+        },
+        {
+            "title": "Completed M.Sc in Computer Science with 9.2 CGPA",
+            "year": "2021"
+        },
+        {
+            "title": "Started professional backend development career",
+            "year": "2021"
+        }
+    ],
+    "books": [
+        {
+            "title": "Book 1: C# Fundamentals",
+            "description": "A practical C# foundation that moves from language basics to real-world concurrency and reflection so you can write confident production code.",
+            "tags": [
+                "C#",
+                ".NET",
+                "Fundamentals"
+            ],
+            "status": "Published",
+            "progress": 0,
+            "guideCount": "14 guides",
+            "coverImage": "",
+            "link": "https://recurpixel.gitbook.io/books/book-1-c-fundamentals/c-fundamentals",
+            "topics": [
+                "Fundamentals & Data Types",
+                "Control Flow",
+                "Object-Oriented Programming",
+                "Delegates, Events & Lambdas",
+                "Advanced Features Timeline",
+                "Exception Handling",
+                "LINQ",
+                "DateTime, Regex & Utilities",
+                "Namespaces & Assemblies",
+                ".NET Runtime & Core Concepts",
+                "File I/O Quick Reference",
+                "Collections",
+                "Attributes & Reflection",
+                "Async, Threading & Concurrency"
+            ]
+        },
+        {
+            "title": "Book 2: ASP.NET Core Development (Quick Reference Cards)",
+            "description": "A fast, developer-first ASP.NET Core reference covering the full API lifecycle from project setup to testing, security, and diagnostics.",
+            "tags": [
+                "ASP.NET Core",
+                "Web API",
+                "Reference"
+            ],
+            "status": "Published",
+            "progress": 0,
+            "guideCount": "11 cards",
+            "coverImage": "",
+            "link": "https://recurpixel.gitbook.io/books/book-2-asp.net-core-development/asp.net-core",
+            "topics": [
+                "Project Structure & Fundamentals",
+                "Configuration & Dependency Injection",
+                "Middleware & HTTP Pipeline",
+                "Routing & Controllers",
+                "Entity Framework Core",
+                "REST API, DTO & Validation",
+                "Authentication & Authorization",
+                "Filters, Logging & Error Handling",
+                "Testing ASP.NET Core",
+                "Testing (Advanced)",
+                "Common Interfaces & Namespaces"
+            ]
+        },
+        {
+            "title": "Book 3: Complete Workbook",
+            "description": "A guided workbook that helps you study in the right order, practice intentionally, and prepare for interviews with less guesswork.",
+            "tags": [
+                "Workbook",
+                "Interview Prep",
+                "Learning Path"
+            ],
+            "status": "Published",
+            "progress": 0,
+            "guideCount": "8 core sections",
+            "coverImage": "",
+            "link": "https://recurpixel.gitbook.io/books/book-3-complete-workbook/complete-workbook",
+            "topics": [
+                "Problems Index (START HERE)",
+                "Workbook Guide",
+                "Learning Phases",
+                "Interview Preparation",
+                "Setup Guide",
+                "Quick Reference",
+                "Troubleshooting Guide",
+                "Resources & Next Steps"
+            ]
+        },
+        {
+            "title": "Book 4: Advanced Guides & References",
+            "description": "An advanced engineering handbook for building scalable backend systems with stronger architecture, performance, and platform-level practices.",
+            "tags": [
+                "Advanced",
+                "Architecture",
+                "Performance"
+            ],
+            "status": "Published",
+            "progress": 0,
+            "guideCount": "12 advanced guides",
+            "coverImage": "",
+            "link": "https://recurpixel.gitbook.io/books/book-4-advanced-guides-and-references/advanced-guides",
+            "topics": [
+                "Azure Fundamentals",
+                "BenchmarkDotNet & Performance",
+                "Caching & Redis Patterns",
+                "Clean Architecture",
+                "Dapper Micro-ORM",
+                "Database Design & Indexing",
+                "Docker & CI/CD Pipelines",
+                "Git & GitHub Workflow",
+                "Logging, Monitoring & Debugging",
+                "Message Queues & Event-Driven Architecture",
+                "SOLID & Design Patterns",
+                "SQL Server & T-SQL"
+            ]
+        },
+        {
+            "title": "Book 5: Advanced Concepts (In Progress)",
+            "description": "An upcoming deep-dive focused on modern backend engineering: microservices architecture, DevOps workflows, and system design for real production scale.",
+            "tags": [
+                "Microservices",
+                "DevOps",
+                "System Design"
+            ],
+            "status": "In Progress",
+            "progress": 35,
+            "guideCount": "Work in progress",
+            "coverImage": "",
+            "link": "https://recurpixel.gitbook.io/",
+            "topics": [
+                "Microservices Design Patterns",
+                "DevOps and Delivery Pipelines",
+                "Scalable System Design",
+                "Observability and Reliability",
+                "Distributed Data and Messaging"
+            ]
+        }
+    ],
+    "contact": {
+        "email": "recurpixel@gmail.com",
+        "github": "RecurPixel",
+        "linkedin": "RecurPixel",
+        "devto": "recurpixel",
+        "message": "I'm currently open to backend development opportunities, especially roles working with .NET and ASP.NET Core. Feel free to reach out for collaborations, questions, or just to connect!"
+    },
+    "config": {
+        "pages": {
+            "home": {
+                "enabled": true,
+                "showProfilePicture": true,
+                "showTipCard": true
+            },
+            "about": {
+                "enabled": true,
+                "showProfilePicture": true,
+                "showSkillsComparison": true
+            },
+            "experience": {
+                "enabled": true,
+                "showTimeline": true
+            },
+            "education": {
+                "enabled": true,
+                "showTechnicalSkills": true
+            },
+            "projects": {
+                "enabled": true,
+                "showPlaceholder": true
+            },
+            "posts": {
+                "enabled": true,
+                "devToUsername": "recurpixel",
+                "maxPosts": 3
+            },
+            "achievements": {
+                "enabled": true,
+                "showMilestones": true
+            },
+            "books": {
+                "enabled": true,
+                "showProgressBars": true
+            },
+            "contact": {
+                "enabled": true,
+                "showSocialLinks": true
+            }
+        },
+        "features": {
+            "darkMode": false,
+            "animations": true,
+            "pageFlipAnimation": true,
+            "scrollIndicator": true,
+            "keyboardNavigation": true,
+            "mobileSwipeGesture": true
+        },
+        "siteMetadata": {
+            "title": "RecurPixel - Backend Developer Portfolio",
+            "description": "Portfolio of Manu - Backend Developer specializing in .NET, ASP.NET Core, and cloud-native applications",
+            "author": "Manu (RecurPixel)",
+            "keywords": "backend developer, .NET, ASP.NET Core, C#, Entity Framework Core, Web API, portfolio, software engineer",
+            "siteUrl": "https://recurpixel.github.io",
+            "ogImage": "/assets/preview.png"
+        },
+        "social": {
+            "github": "https://github.com/RecurPixel",
+            "linkedin": "https://linkedin.com/in/RecurPixel",
+            "email": "recurpixel@gmail.com",
+            "devto": "https://dev.to/recurpixel"
+        },
+        "assets": {
+            "resumePdf": "/assets/resume.pdf",
+            "profileImageMain": "/assets/profile-passport.png",
+            "profileImageAbout": "/assets/profile-standing-side.png",
+            "favicon": "/assets/favicon.ico"
+        }
+    }
+}
