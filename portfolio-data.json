@@ -14,7 +14,7 @@
             "My technical journey has evolved from working with different backend technologies to now specializing in the **.NET ecosystem**. I focus on building clean, maintainable APIs using ASP.NET Core, Entity Framework Core, and modern development practices.",
             "I'm passionate about backend architecture, database design, and writing code that's easy for teams to work with. Currently expanding my expertise in cloud-native development with Azure."
         ],
-        "goal": "🎯 Seeking backend development opportunities where I can contribute to production systems while growing as a .NET engineer.",
+        "goal": "Open to backend .NET roles. APIs, architecture, systems. No frontend.",
         "currentSkills": [
             "C# & .NET",
             "ASP.NET Core Web API",
@@ -27,8 +27,8 @@
             "Microservices Architecture",
             "Docker & Kubernetes",
             "Azure Cloud Services",
-            "Design Patterns",
-            "System Design & Scalability"
+            "Communication protocols (gRPC, GraphQL)",
+            "CI/CD Pipelines"
         ]
     },
     "experience": [
@@ -43,7 +43,7 @@
             "phase": "🚀 Growth & Contribution",
             "narrative": "Successfully transitioned to full-time independent development. Building production-grade .NET applications and maintaining impactful open-source projects. Proving the viability of indie development while contributing meaningfully to the .NET ecosystem.",
             "responsibilities": [
-                "📦 Published and actively maintain **RecurPixel.Notify** NuGet package (500+ downloads) — multi-channel notification library with 30+ adapters and 13+ channels",
+                "📦 Built and published RecurPixel.Notify — a 37-package .NET notification framework (1 core, 1 orchestrator, 30+ adapters) with 4,800+ total NuGet downloads",
                 "🏗️ Building **ShopCore** — enterprise-grade multi-vendor e-commerce backend with 150+ API endpoints, Clean Architecture, and CQRS",
                 "🔧 Architected production systems using ASP.NET Core 10, Entity Framework Core, advanced design patterns, and Azure",
                 "👨‍💻 Contributing to .NET community through open-source development and helping other developers",
@@ -183,47 +183,48 @@
     "projects": [
         {
             "name": "RecurPixel.Notify",
-            "description": "Production-ready NuGet library for multi-channel notification delivery in ASP.NET Core. Drop-in solution supporting Email, SMS, Push, WhatsApp, Slack, Discord, Teams, Mattermost, Rocket.Chat, Telegram, Facebook, LINE, Viber, and In-App notifications.",
+            "description": "A .NET notification framework — not a single package, but a full ecosystem. One core SDK, one orchestration layer, 30+ provider adapters, and 2 meta packages. Handles multi-channel notification delivery (Email, SMS, Push, WhatsApp, Slack, Discord, Teams, Mattermost, Rocket.Chat, Telegram, Facebook, LINE, Viber, In-App) through a single consistent interface. Zero infrastructure required — pure library, your keys, your delivery log.",
             "technologies": [
                 ".NET",
                 "ASP.NET Core",
                 "Dependency Injection",
-                "NuGet Package",
+                "Adapter Pattern",
+                "NuGet",
                 "SendGrid",
                 "Twilio",
                 "Firebase",
-                "Razorpay"
+                "Exponential Backoff"
             ],
             "tags": [
                 "NuGet",
                 "Open Source",
-                "Production",
+                "Framework",
                 "Multi-Channel"
             ],
             "github": "https://github.com/RecurPixel/Notify",
             "demo": "https://www.nuget.org/packages/RecurPixel.Notify.Sdk",
             "image": "",
             "metrics": {
+                "packages": "35",
                 "adapters": "30+",
-                "channels": "13+",
-                "downloads": "500+",
-                "providers": "25+"
+                "channels": "14+",
+                "downloads": "4800+"
             },
             "highlights": [
-                "30+ provider adapters",
-                "13+ notification channels",
-                "Zero infrastructure - pure library",
+                "35 published NuGet packages — 1 core, 1 orchestrator, 30+ adapters, 2 meta packages",
+                "14+ notification channels through a single consistent interface",
+                "Zero infrastructure — pure library, no platform, no SaaS dependency",
                 "DI-native with ASP.NET Core integration",
                 "Retry with exponential backoff",
                 "Cross-channel fallback chains",
                 "Parallel dispatch support",
-                "Hook-based logging"
+                "Hook-based delivery logging"
             ],
             "status": "Published"
         },
         {
             "name": "ShopCore",
-            "description": "ShopCore is a dual-purpose platform combining traditional e-commerce with an innovative subscription-based recurring delivery system for daily essentials, targeting the Indian market. One backend powers a public multi-vendor marketplace and a private subscription product.",
+            "description": "Dual-purpose backend combining a traditional multi-vendor e-commerce marketplace with a subscription-based recurring delivery system — two completely different business models powered by one backend. Built for the Indian market with support for daily delivery cycles, flexible billing, and location-based vendor discovery.",
             "technologies": [
                 "ASP.NET Core 10",
                 "Entity Framework Core 10",
@@ -231,41 +232,37 @@
                 "FluentValidation",
                 "SQL Server",
                 "JWT Auth",
-                "Razorpay",
-                "Stripe",
                 "Clean Architecture",
-                "CQRS"
+                "CQRS",
+                "Razorpay",
+                "Stripe"
             ],
             "tags": [
                 "E-Commerce",
                 "Subscriptions",
                 "Multi-Vendor",
-                "Production",
-                "Open Source"
+                "Production"
             ],
             "github": "https://github.com/RecurPixel/ShopCore",
             "demo": "",
             "image": "",
             "metrics": {
-                "endpoints": "150+",
-                "entities": "50+",
-                "tables": "40+",
-                "workflows": "12+"
+                "apiEndpoints": "187",
+                "domainEntities": "25",
+                "dbTables": "21",
+                "cqrsHandlers": "173",
+                "tests": "195"
             },
             "highlights": [
-                "150+ API endpoints",
-                "50+ domain entities and models",
-                "One backend, two frontends: public marketplace + private subscription product",
-                "Flexible billing cycles with daily delivery and monthly payment",
-                "Optional deposit system with smart settlement",
+                "One backend powers two completely different business models — marketplace and subscription product",
+                "Flexible billing: weekly, monthly, or fixed-day cycles with daily delivery",
+                "Optional deposit system with automated settlement logic",
                 "Multi-item subscriptions in one plan (milk + newspaper + bread)",
                 "Vendor-led customer onboarding and location-based vendor discovery",
-                "Subscription management with skip/pause",
+                "Subscription lifecycle management: skip, pause, resume",
                 "Razorpay and Stripe integration with role-based access control",
-                "Email and in-app notifications",
-                "PDF invoice generation",
-                "xUnit integration testing",
-                "WebApplicationFactory setup included"
+                "PDF invoice generation, email and in-app notifications",
+                "xUnit integration tests with WebApplicationFactory"
             ],
             "features": [
                 "Authentication & Authorization",
@@ -273,7 +270,7 @@
                 "E-Commerce Marketplace (Cart, Checkout, Orders)",
                 "Subscription Platform (Recurring Delivery + Billing)",
                 "Flexible Billing Cycles",
-                "Optional Deposit & Settlement",
+                "Deposit & Smart Settlement",
                 "Location-based Vendor Discovery",
                 "Payment Processing",
                 "Notifications",
@@ -283,40 +280,37 @@
             "status": "Production Ready"
         },
         {
-            "name": "Business Management Platform",
-            "description": "Full-stack application for inventory tracking, client management, and reporting with admin dashboard.",
+            "name": "RecurPixel.EasyMessages",
+            "description": "Zero-configuration .NET message library. 100+ built-in standardized error, success, and validation messages with a fluent, IntelliSense-driven API. Drop it in and start returning consistent messages immediately.",
             "technologies": [
-                "Backend APIs",
-                "Database Design",
-                "Cloud Deployment"
+                ".NET",
+                "C#",
+                "NuGet Package"
             ],
             "tags": [
-                "REST API",
-                "Full Stack",
-                "Production"
+                "NuGet",
+                "Open Source",
+                "Developer Tooling"
             ],
             "github": "",
-            "demo": "",
+            "demo": "https://www.nuget.org/packages/RecurPixel.EasyMessages",
             "image": "",
-            "note": "Client project - code not publicly available"
-        },
-        {
-            "name": "Meeting Scheduler API",
-            "description": "Enterprise scheduling system with calendar integration, time slot management, and third-party service sync.",
-            "technologies": [
-                "REST APIs",
-                "Database Architecture",
-                "Third-party Integration"
+            "metrics": {
+                "messages": "100+",
+                "downloads": "500+",
+                "config": "Zero"
+            },
+            "highlights": [
+                "100+ built-in messages — Authentication, CRUD, Validation, System errors",
+                "Type-safe IntelliSense-driven API with compile-time safety",
+                "Multiple output formats — JSON, XML, Console, Plain Text",
+                "Zero configuration — works immediately out of the box",
+                "Fluent chainable API for clean, readable code",
+                "IOptions pattern with full configuration support and presets",
+                "Extensible — custom messages, formatters, and interceptors",
+                "High performance — optimized for .NET 5–10, minimal overhead"
             ],
-            "tags": [
-                "Backend",
-                "Integration",
-                "Enterprise"
-            ],
-            "github": "",
-            "demo": "",
-            "image": "",
-            "note": "Production system"
+            "status": "Published"
         }
     ],
     "achievements": [

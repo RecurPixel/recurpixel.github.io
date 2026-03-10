@@ -1,9 +1,12 @@
+import { portfolioData } from "@/lib/portfolioData";
 import SectionHeading from "./SectionHeading";
 
-const education = [
-  { period: "2019 – 2021", degree: "M.Sc Computer Science", school: "VCACS, Pune", grade: "CGPA: 9.2" },
-  { period: "2016 – 2019", degree: "B.Sc Computer Science", school: "S.M.Joshi College, Pune", grade: "86.8%" },
-];
+const education = (portfolioData.education ?? []).map((item) => ({
+  period: `${item.startDate ?? ""} - ${item.endDate ?? ""}`.trim(),
+  degree: item.degree,
+  school: item.institution,
+  grade: item.grade ?? "",
+}));
 
 const EducationSection = () => (
   <section>

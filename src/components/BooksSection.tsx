@@ -1,120 +1,19 @@
 import { Badge } from "@/components/ui/badge";
 import { Progress } from "@/components/ui/progress";
+import { portfolioData } from "@/lib/portfolioData";
 import { BookOpen, ExternalLink } from "lucide-react";
 import SectionHeading from "./SectionHeading";
 
-const books = [
-    {
-        title: "Book 1: C# Fundamentals",
-        description:
-            "A practical C# foundation that moves from language basics to real-world concurrency and reflection so you can write confident production code.",
-        tags: ["C#", ".NET", "Fundamentals"],
-        status: "Published",
-        progress: 0,
-        link: "https://recurpixel.gitbook.io/books/book-1-c-fundamentals/c-fundamentals",
-        guideCount: "14 guides",
-        topics: [
-            "Fundamentals & Data Types",
-            "Control Flow",
-            "Object-Oriented Programming",
-            "Delegates, Events & Lambdas",
-            "Advanced Features Timeline",
-            "Exception Handling",
-            "LINQ",
-            "DateTime, Regex & Utilities",
-            "Namespaces & Assemblies",
-            ".NET Runtime & Core Concepts",
-            "File I/O Quick Reference",
-            "Collections",
-            "Attributes & Reflection",
-            "Async, Threading & Concurrency",
-        ],
-    },
-    {
-        title: "Book 2: ASP.NET Core Development (Quick Reference Cards)",
-        description:
-            "A fast, developer-first ASP.NET Core reference covering the full API lifecycle from project setup to testing, security, and diagnostics.",
-        tags: ["ASP.NET Core", "Web API", "Reference"],
-        status: "Published",
-        progress: 0,
-        link: "https://recurpixel.gitbook.io/books/book-2-asp.net-core-development/asp.net-core",
-        guideCount: "11 cards",
-        topics: [
-            "Project Structure & Fundamentals",
-            "Configuration & Dependency Injection",
-            "Middleware & HTTP Pipeline",
-            "Routing & Controllers",
-            "Entity Framework Core",
-            "REST API, DTO & Validation",
-            "Authentication & Authorization",
-            "Filters, Logging & Error Handling",
-            "Testing ASP.NET Core",
-            "Testing (Advanced)",
-            "Common Interfaces & Namespaces",
-        ],
-    },
-    {
-        title: "Book 3: Complete Workbook",
-        description:
-            "A guided workbook that helps you study in the right order, practice intentionally, and prepare for interviews with less guesswork.",
-        tags: ["Workbook", "Interview Prep", "Learning Path"],
-        status: "Published",
-        progress: 0,
-        link: "https://recurpixel.gitbook.io/books/book-3-complete-workbook/complete-workbook",
-        guideCount: "8 core sections",
-        topics: [
-            "Problems Index (START HERE)",
-            "Workbook Guide",
-            "Learning Phases",
-            "Interview Preparation",
-            "Setup Guide",
-            "Quick Reference",
-            "Troubleshooting Guide",
-            "Resources & Next Steps",
-        ],
-    },
-    {
-        title: "Book 4: Advanced Guides & References",
-        description:
-            "An advanced engineering handbook for building scalable backend systems with stronger architecture, performance, and platform-level practices.",
-        tags: ["Advanced", "Architecture", "Performance"],
-        status: "Published",
-        progress: 0,
-        link: "https://recurpixel.gitbook.io/books/book-4-advanced-guides-and-references/advanced-guides",
-        guideCount: "12 advanced guides",
-        topics: [
-            "Azure Fundamentals",
-            "BenchmarkDotNet & Performance",
-            "Caching & Redis Patterns",
-            "Clean Architecture",
-            "Dapper Micro-ORM",
-            "Database Design & Indexing",
-            "Docker & CI/CD Pipelines",
-            "Git & GitHub Workflow",
-            "Logging, Monitoring & Debugging",
-            "Message Queues & Event-Driven Architecture",
-            "SOLID & Design Patterns",
-            "SQL Server & T-SQL",
-        ],
-    },
-    {
-        title: "Book 5: Advanced Concepts (In Progress)",
-        description:
-            "An upcoming deep-dive focused on modern backend engineering: microservices architecture, DevOps workflows, and system design for real production scale.",
-        tags: ["Microservices", "DevOps", "System Design"],
-        status: "In Progress",
-        progress: 35,
-        link: "https://recurpixel.gitbook.io/",
-        guideCount: "Work in progress",
-        topics: [
-            "Microservices Design Patterns",
-            "DevOps and Delivery Pipelines",
-            "Scalable System Design",
-            "Observability and Reliability",
-            "Distributed Data and Messaging",
-        ],
-    },
-];
+const books = (portfolioData.books ?? []).map((book) => ({
+    title: book.title,
+    description: book.description ?? "",
+    tags: book.tags ?? [],
+    status: book.status ?? "Published",
+    progress: book.progress ?? 0,
+    link: book.link ?? "",
+    guideCount: book.guideCount ?? "",
+    topics: book.topics ?? [],
+}));
 
 const BooksSection = () => (
     <section>
